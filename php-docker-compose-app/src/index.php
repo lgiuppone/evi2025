@@ -12,8 +12,7 @@ try {
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $stmt = $pdo->query("SELECT * FROM users");
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        echo json_encode(['message' => 'dsadsad request method.']);
-        #echo json_encode($results);
+        echo json_encode($results);
     } else {
         echo json_encode(['message' => 'Unsupported request method.']);
     }
